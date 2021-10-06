@@ -28,7 +28,12 @@ jobs:
             - ~/.npm
       - run:
           name: Run Tests
-          command: npm run test
+          command: npm run test      
+      - run:
+          name: Save test results
+          command: |
+            mkdir  -p ~/repo/newman
+            cp ./newman/*.html ~/repo/newman/
       - store_artifacts:
           path: ~/repo/newman
       - store_test_results:
