@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "newman run Chuck-Norris.postman_collection.json -d categories.csv -e Production.postman_environment.json -r htmlextra,cli"
+    "test": "newman run collections/jokes/Chuck-Norris.postman_collection.json -d test-data/categories.csv -e environments/Production.postman_environment.json -r htmlextra,cli"
   },
   "repository": {
     "type": "git",
