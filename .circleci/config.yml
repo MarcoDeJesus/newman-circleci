@@ -36,8 +36,6 @@ jobs:
             cp ./newman/*.html ~/repo/newman/
       - store_artifacts:
           path: ~/repo/newman
-      - store_test_results:
-          path: ~/repo/newman
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
