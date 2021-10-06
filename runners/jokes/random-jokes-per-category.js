@@ -2,8 +2,8 @@ var newman = require('newman'); // require Newman in your project
 
 // call newman.run to pass `options` object and wait for callback
 newman.run({
-    collection: require('../../collections/jokes/Chuck-Norris.postman_collection.json'),
-    environment: "environments/Production.postman_environment.json",
+    collection: require('../../collections/jokes/random-jokes-per-category.postman_collection.json'),
+    environment: "environments/staging.postman_environment.json",
     iterationData: "test-data/categories.csv",
     reporters: ['htmlextra', 'cli'], 
     reporter: {
