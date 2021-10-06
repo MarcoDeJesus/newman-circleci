@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "newman run collections/jokes/Chuck-Norris.postman_collection.json -d test-data/categories.csv -e environments/Production.postman_environment.json -r htmlextra,cli"
+    "test": "npm run test-random-jokes & npm run test-random-jokes-per-category",
+    "test-random-jokes": "newman run collections/jokes/random-jokes.postman_collection.json -e environments/production.postman_environment.json -r htmlextra,cli",
+    "test-random-jokes-per-category": "newman run collections/jokes/random-jokes-per-category.postman_collection.json -d test-data/categories.csv -e environments/staging.postman_environment.json -r htmlextra,cli"
   },
   "repository": {
     "type": "git",
