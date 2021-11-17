@@ -1,7 +1,7 @@
 # newman-circleci
 
 To run all scripts with default Staging environment, type:
-npm test 
+npm test  
 npm run test
 
 To run all the scripts with specified testing environment by user input, do:
