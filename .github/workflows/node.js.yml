@@ -12,9 +12,7 @@ on:
 jobs:
   
   build:
-
     runs-on: ubuntu-latest
-
     strategy:
       matrix:
         node-version: [12.x, 14.x, 16.x]
@@ -34,6 +32,7 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
+    - name: Running the tests
     - run: npm test 
         
   generate-report:
